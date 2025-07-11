@@ -4,10 +4,13 @@ import os
 
 from aiogram import Bot, Dispatcher
 from dotenv import load_dotenv
+from keep_alive import keep_alive
 
 from handlers import commands
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+keep_alive()
 
 async def main():
     load_dotenv()
